@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@main
         with:
           fetch-depth: 0
 
@@ -32,7 +32,7 @@ jobs:
         run: make release
 
       - name: Create Release and Upload Assets
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@master
         with:
           name: ${{ github.ref_name }}
           tag_name: ${{ github.ref }}
@@ -40,8 +40,4 @@ jobs:
           draft: false
           prerelease: false
           files: |
-            ./QUARTZ64_EFI.img.gz
-            ./SOQUARTZ_EFI.img.gz
-            ./PINETAB2_EFI.img.gz
-            ./ROC-RK3566-PC_EFI.img.gz
-            ./ROC-RK3568-PC_EFI.img.gz
+            ./*.img.gz
