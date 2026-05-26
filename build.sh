@@ -89,37 +89,9 @@ build_uefitools
 
 for board in ${RKUEFIBOARDS}; do
 	case ${board} in
-	QUARTZ64)
-		build_uefi Pine64 Quartz64
-		build_fit Quartz64 rk3566-quartz64-a
-		;;
-	SOQUARTZ)
-		build_uefi Pine64 SOQuartz
-		build_fit SOQuartz rk3566-soquartz-cm4
-		;;
-	ROC-RK3566-PC)
-		build_uefi Firefly ROC-RK3566-PC
-		build_fit ROC-RK3566-PC rk3566-roc-pc
-		;;
-	ROC-RK3568-PC)
-		build_uefi Firefly ROC-RK3568-PC
-		build_fit ROC-RK3568-PC rk3568-firefly-roc-pc
-		;;
-	ORANGEPI3B)
-		build_uefi OrangePi OrangePi3B
-		build_fit OrangePi3B rk3566-orangepi-3b
-		;;
-	PINETAB2)
-		build_uefi Pine64 PineTab2
-		build_fit PineTab2 rk3566-pinetab2
-		;;
-	ZERO-3W)
-		build_uefi Radxa Zero-3W
-		build_fit Zero-3W rk3566-radxa-zero-3w
-		;;
-	ODROID-M1S)
-		build_uefi HardKernel Odroid-M1S
-		build_fit Odroid-M1S rk3566-hardkernel-odroid-m1s
+	ROCK-3A)
+		build_uefi Radxa Rock-3A
+		build_fit Rock-3A rk3568-rock-3a
 		;;
 	*)
 		echo "Unknown board ${board}"
